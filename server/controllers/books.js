@@ -54,9 +54,21 @@ export function displayEditPage(req, res, next) {
 
 // POST - process the information passed from the details form and update the document
 export function processEditPage(req, res, next) {
-    /*****************
-    * ADD CODE HERE *
-    *****************/
+    let newBook = booksModel({
+        name: req.body.name,
+        author: req.body.author,
+        published: req.body.published,
+        description: req.body.description,
+        price: req.body.price
+    });
+
+    booksModel.create(newBook, (err, Books) => {
+        if (err){
+            console.error(err);
+            res.end(err);
+        };
+        res.redirect('/books/list')
+    })
 }
 
 // GET - process the delete by user id

@@ -4,14 +4,13 @@
             <h1><%= title %></h1>
 
             <form class="form" method="POST">
-                <input type="hidden" name="id" value="<%= book_id %>"
                 <div class="form-group">
                     <label for="nameTextField">Book Title</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
                     placeholder="Enter the Book Title"
                     name="name" 
-                    value="<%= book.name %>"
+                    value="<%= books.name %>"
                     required>
                 </div>
 
@@ -21,7 +20,7 @@
                     id="authorTextField"
                     placeholder="Enter the Book's Author"
                     name="author" 
-                    value="<%= book.author %>"
+                    value="<%= books.author %>"
                     required>
                 </div>
 
@@ -31,7 +30,7 @@
                     id="publishedTextField"
                     placeholder="Enter the Year of Publication"
                     name="published" 
-                    value="<%= book.published %>"
+                    value="<%= books.published %>"
                     required>
                 </div>
 
@@ -42,7 +41,7 @@
                     placeholder="Enter the a brief description of the book"
                     name="description" 
                     required>
-                    <%= book.description %>
+                    <%= books.description %>
                     </textarea>
                 </div>
 
@@ -52,7 +51,7 @@
                     id="priceTextField"
                     placeholder="Enter the Book's Price"
                     name="price" 
-                    value="<%= book.price %>"
+                    value="<%= books.price %>"
                     required>
                 </div>
 
