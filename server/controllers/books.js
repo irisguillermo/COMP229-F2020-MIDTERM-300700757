@@ -1,3 +1,5 @@
+//<!-- Iris Guillermo |300700757 | October 20, 2022 -->
+
 // define the book model
 import { render } from 'ejs';
 import books from '../models/books.js';
